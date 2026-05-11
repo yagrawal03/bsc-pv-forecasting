@@ -10,3 +10,8 @@ data/
 fulltrainedmodels/
 modelresults/
 .env
+
+# Daten-Ordnerstruktur tracken (ohne Dateiinhalte)
+!data/
+!data/**/.gitkeep
+!data/README.md
