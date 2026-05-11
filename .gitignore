@@ -1,0 +1,12 @@
+*.parquet
+*.npy
+*.pkl
+*.pt
+*.txt
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+data/
+fulltrainedmodels/
+modelresults/
+.env
