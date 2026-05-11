@@ -15,3 +15,7 @@ modelresults/
 !data/
 !data/**/.gitkeep
 !data/README.md
+!fulltrainedmodels/
+!fulltrainedmodels/**/.gitkeep
+!data/Kaggle_results/
+!data/Kaggle_results/**/.gitkeep
