@@ -167,38 +167,6 @@ All Stage 2 models use the best hyperparameters found in Stage 1.
 
 ---
 
-## Results
-
-### Stage 1 — Test Set (406 Spots)
-
-| Model | MAE | wMAE | wRMSE | R² |
-|---|---|---|---|---|
-| **LightGBM SPT** | 0.02812 | **0.0533** | **0.0764** | 0.645 |
-| RandomForest | 0.01239 | 0.0935 | 0.1318 | 0.716 |
-| LightGBM | 0.01216 | 0.0947 | 0.1328 | 0.724 |
-| iTransformer | 0.01148 | 0.0965 | 0.1379 | 0.689 |
-| GRU | 0.01131 | 0.0995 | 0.1455 | 0.688 |
-| CNN-LSTM | 0.01160 | 0.1015 | 0.1451 | 0.684 |
-| TSMixer | 0.01153 | 0.1018 | 0.1438 | 0.699 |
-| LinearRegression | 0.01907 | 0.1393 | 0.1635 | 0.237 |
-| Chronos (zero-shot) | 0.05472 | 0.2705 | 0.3144 | −0.512 |
-| Analog KNN | — | 0.7408 | 0.9572 | −12.82 |
-
-### Stage 2 — OOS Hold-out (100 Spots)
-
-| Model | OOS MAE | OOS wMAE | OOS wRMSE | Coverage 80% | Test wRMSE |
-|---|---|---|---|---|---|
-| **CNN-LSTM** | **0.01569** | **0.0885** | **0.1250** | 87.3% | 0.13599 |
-| GRU | 0.01632 | 0.0893 | 0.1221 | 49.9% ⚠️ | 0.13654 |
-| iTransformer | 0.01719 | 0.0908 | 0.1262 | 79.7% | 0.13708 |
-| RandomForest | 0.01830 | 0.1009 | 0.1352 | 32.5% ⚠️ | 0.14135 |
-| LightGBM | 0.02022 | 0.1052 | 0.1424 | 74.5% | 0.15562 |
-
-**wMAE / wRMSE** are capacity-weighted metrics (w = y / ȳ) — giving higher weight to high-production timesteps.  
-**Coverage 80%** measures P(q10 ≤ y ≤ q90); target is 0.80. GRU and RandomForest are undercalibrated.
-
----
-
 ## Metrics Reference
 
 | Metric | Formula | Notes |
@@ -229,4 +197,11 @@ Training scripts run on **Kaggle GPU** (T4, 30 GB RAM). Data paths in the script
 - Ansari, A.F. et al. (2024). Chronos: Learning the Language of Time Series. *arXiv:2403.07815*.
 - Chen, T., Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. *KDD '16*.
 - Perez, R. et al. (1990). Modeling daylight availability and irradiance components from direct and global irradiance. *Solar Energy*, 44(5), 271–289.
+
+---
+
+## Full Results
+
+All evaluation results, metric tables, and analysis are documented in the accompanying BSc thesis.
+
 
